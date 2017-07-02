@@ -23,7 +23,7 @@ th {
 td {
     padding: 0 20px 0 10px;
 }
-    td>div.description {
+    td>div.description, td>p.description {
         font-size: smaller;
         padding-left: 24px;
     }

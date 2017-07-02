@@ -1,5 +1,4 @@
-﻿/// <reference path="_references.js" />
-
+﻿// removed _references.js
 module('JavaScript Array Test Suite', { setup: function () { initialize(); } });
 
 test("'concat' method", function () {
@@ -8,7 +7,7 @@ test("'concat' method", function () {
     // arrange
     var btn = document.getElementById("btn-concat");
     var result = removeDisplayFormatting(document.getElementById('code0').innerText.trim());
-    var expected = js[0].trim();
+    var expected = arrayMethods[0].code.trim();
     // assert
     equal(result, expected, "Test that 'concat' sample code set in JavaScript matches string displayed in browser.");
 
@@ -26,7 +25,7 @@ test("'indexOf' method", function () {
     // arrange
     var btn = document.getElementById("btn-indexOf");
     var result = removeDisplayFormatting(document.getElementById('code1').innerText.trim());
-    var expected = js[1].trim();
+    var expected = arrayMethods[1].code.trim();
     // assert
     equal(result, expected, "Test that 'indexOf' sample code set in JS matches sample code displayed in browser.");
 
@@ -44,7 +43,7 @@ test("'join' method", function () {
     // arrange
     var btn = document.getElementById("btn-join");
     var result = removeDisplayFormatting(document.getElementById('code2').innerText.trim());
-    var expected = js[2].trim();
+    var expected = arrayMethods[2].code.trim();
     // assert
     equal(result, expected, "Test that 'join' sample code set in JS matches sample code displayed in browser.");
 
@@ -62,7 +61,7 @@ test("'lastIndexOf' method", function () {
     // arrange
     var btn = document.getElementById("btn-lastIndexOf");
     var result = removeDisplayFormatting(document.getElementById('code3').innerText.trim());
-    var expected = js[3].trim();
+    var expected = arrayMethods[3].code.trim();
     // assert
     equal(result, expected, "Test that 'lastIndexOf' sample code set in JS matches sample code displayed in browser.");
 
@@ -80,7 +79,7 @@ test("'pop' method", function () {
     // arrange
     var btn = document.getElementById("btn-pop");
     var result = removeDisplayFormatting(document.getElementById('code4').innerText.trim());
-    var expected = js[4].trim();
+    var expected = arrayMethods[4].code.trim();
     // assert
     equal(result, expected, "Test that 'pop' sample code set in JS matches sample code displayed in browser.");
 
@@ -98,7 +97,7 @@ test("'push' method", function () {
     // arrange
     var btn = document.getElementById("btn-push");
     var result = removeDisplayFormatting(document.getElementById('code5').innerText.trim());
-    var expected = js[5].trim();
+    var expected = arrayMethods[5].code.trim();
     // assert
     equal(result, expected, "Test that 'push' sample code set in JS matches sample code displayed in browser.");
 
@@ -116,7 +115,7 @@ test("'reverse' method", function () {
     // arrange
     var btn = document.getElementById("btn-reverse");
     var result = removeDisplayFormatting(document.getElementById('code6').innerText.trim());
-    var expected = js[6].trim();
+    var expected = arrayMethods[6].code.trim();
     // assert
     equal(result, expected, "Test that 'reverse' sample code set in JS matches sample code displayed in browser.");
 
@@ -134,7 +133,7 @@ test("'shift' method", function () {
     // arrange
     var btn = document.getElementById("btn-shift");
     var result = removeDisplayFormatting(document.getElementById('code7').innerText.trim());
-    var expected = js[7].trim();
+    var expected = arrayMethods[7].code.trim();
     // assert
     equal(result, expected, "Test that 'shift' sample code set in JS matches sample code displayed in browser.");
 
@@ -152,7 +151,7 @@ test("'slice' method", function () {
     // arrange
     var btn = document.getElementById("btn-slice");
     var result = removeDisplayFormatting(document.getElementById('code8').innerText.trim());
-    var expected = js[8].trim();
+    var expected = arrayMethods[8].code.trim();
     // assert
     equal(result, expected, "Test that 'slice' sample code set in JS matches sample code displayed in browser.");
 
@@ -170,7 +169,7 @@ test("'sort' method", function () {
     // arrange
     var btn = document.getElementById("btn-sort");
     var result = removeDisplayFormatting(document.getElementById('code9').innerText.trim());
-    var expected = js[9].trim();
+    var expected = arrayMethods[9].code.trim();
     // assert
     equal(result, expected, "Test that 'sort' sample code set in JS matches sample code displayed in browser.");
 
@@ -188,7 +187,7 @@ test("'splice' method", function () {
     // arrange
     var btn = document.getElementById("btn-splice");
     var result = removeDisplayFormatting(document.getElementById('code10').innerText.trim());
-    var expected = js[10].trim();
+    var expected = arrayMethods[10].code.trim();
     // assert
     equal(result, expected, "Test that 'splice' sample code set in JS matches sample code displayed in browser.");
 
@@ -206,7 +205,7 @@ test("'toString' method", function () {
     // arrange
     var btn = document.getElementById("btn-toString");
     var result = removeDisplayFormatting(document.getElementById('code11').innerText.trim());
-    var expected = js[11].trim();
+    var expected = arrayMethods[11].code.trim();
     // assert
     equal(result, expected, "Test that 'toString' sample code set in JS matches sample code displayed in browser.");
 
@@ -224,7 +223,7 @@ test("'unshift' method", function () {
     // arrange
     var btn = document.getElementById("btn-unshift");
     var result = removeDisplayFormatting(document.getElementById('code12').innerText.trim());
-    var expected = js[12].trim();
+    var expected = arrayMethods[12].code.trim();
     // assert
     equal(result, expected, "Test that 'unshift' sample code set in JS matches sample code displayed in browser.");
 
@@ -242,7 +241,7 @@ test("'valueOf' method", function () {
     // arrange
     var btn = document.getElementById("btn-valueOf");
     var result = removeDisplayFormatting(document.getElementById('code13').innerText.trim());
-    var expected = js[13].trim();
+    var expected = arrayMethods[13].code.trim();
     // assert
     equal(result, expected, "Test that 'valueOf' sample code set in JS matches sample code displayed in browser.");
 

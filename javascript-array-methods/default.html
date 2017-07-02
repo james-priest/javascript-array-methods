@@ -10,229 +10,237 @@
     <!--<link href="Content/Prettify/Themes/sunburst.css" rel="stylesheet" />-->
 </head>
 <body>
-    <h1>JavaScript Array Methods</h1>
-    <table>
-        <tr class="row">
-            <th class="col-source">Code</th>
-            <th class="col-button"></th>
-            <th class="col-result">Result</th>
-        </tr>
-<!--
-        <tr>
-            <td>
-                sample code
-                <pre class="prettyprint linenums">
-&lt;script type="text/javascript"&gt;
-// Here is some javascript
-function helloWorld(world) {
-    for (var i = 42; --i >= 0;) {
-        alert('Hello ' + String(world));
-    }
-}
-&lt;/script&gt;
-&lt;style&gt;
-    /* This is some CSS code */
-    .red { color: red; }
-    .green { color: green; }
-    .blue {color: blue; }
-    p { color: pink }
-    u { color: "umber" }
-&lt;/style&gt;</pre>
-            </td>
-            <td></td>
-            <td class="results">
-                <pre id="resultTest"></pre>
-            </td>
-        </tr>
--->
-        <tr>
-            <td>
-                concat
-                <div class="description">Joins two or more arrays and returns a new array with all the items.</div>
-                <pre class="prettyprint linenums"><code id="code0"></code></pre>
-            </td>
-            <td><button id="btn-concat">concat</button></td>
-            <td class="results">
-                <pre id="result0"></pre>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                indexOf
-                <div class="description">Locates the item in the array and returns its index.</div>
-                <pre id="code1" class="prettyprint linenums"></pre>
-            </td>
-            <td><button id="btn-indexOf">indexOf</button></td>
-            <td class="results">
-                <pre id="result1"></pre>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                join
-                <div class="description">
-                    Creates a string from the items in the array. The items are comma-delimited by default,
-                    but you can pass an alternate separator.
-                </div>
-                <pre id="code2" class="prettyprint linenums"></pre>
-            </td>
-            <td><button id="btn-join">join</button></td>
-            <td class="results">
-                <pre id="result2"></pre>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                lastIndexOf
-                <div class="description">
-                    Searches from the end of the array for the last item in the array
-                    that meets the search criteria and returns its index.
-                </div>
-                <pre id="code3" class="prettyprint linenums"></pre>
-            </td>
-            <td><button id="btn-lastIndexOf">lastIndexOf</button></td>
-            <td class="results">
-                <pre id="result3"></pre>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                pop
-                <div class="description">
-                    Removes and returns the last element of the array. This reduces the
-                    length of the array by one.
-                </div>
-                <pre id="code4" class="prettyprint linenums"></pre>
-            </td>
-            <td><button id="btn-pop">pop</button></td>
-            <td class="results">
-                <pre id="result4"></pre>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                push
-                <div class="description">Adds a new item to the end of an array and returns the new length.</div>
-                <pre id="code5" class="prettyprint linenums"></pre>
-            </td>
-            <td><button id="btn-push">push</button></td>
-            <td class="results">
-                <pre id="result5"></pre>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                reverse
-                <div class="description">
-                    Reverses the order of the items in an array and returns a reference
-                    (not a new array) to the reversed array, so the original array is modified.
-                </div>
-                <pre id="code6" class="prettyprint linenums"></pre>
-            </td>
-            <td><button id="btn-reverse">reverse</button></td>
-            <td class="results">
-                <pre id="result6"></pre>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                shift
-                <div class="description">
-                    Removes and returns the first item in the array. If no items are in the
-                    array, the return value is undefined.
-                </div>
-                <pre id="code7" class="prettyprint linenums"></pre>
-            </td>
-            <td><button id="btn-shift">shift</button></td>
-            <td class="results">
-                <pre id="result7"></pre>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                slice
-                <div class="description">
-                    Returns a <strong>new</strong> array that represents part of the existing array. The slice method has two parameters:
-                    <em>start</em> and <em>end</em>. The start parameter is the index of the first item to include in the result. The end
-                    parameter is the index of the item that you don't want included in the result.
-                </div>
-                <pre id="code8" class="prettyprint linenums"></pre>
-            </td>
-            <td><button id="btn-slice">slice</button></td>
-            <td class="results">
-                <pre id="result8"></pre>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                sort
-                <div class="description">Sorts the items in an array and returns a reference to the array. The original array is modified.</div>
-                <pre id="code9" class="prettyprint linenums"></pre>
-            </td>
-            <td><button id="btn-sort">sort</button></td>
-            <td class="results">
-                <pre id="result9"></pre>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                splice
-                <div class="description">
-                    Adds and removes items from an array and returns the removed items. The original array is modified to
-                    contain the result. The splice method's first parameter is the starting index of where to start adding or deleting.
-                    The second parameter indicates how many items to remove. If 0 is passed as the second parameter, no items are removed.
-                    If the second parameter is larger that the quantity of items available for removal, all items from the starting index
-                    to the end of the array are removed. After the first two parameters, you can specify as many items as you want to add.
-                </div>
-                <pre id="code10" class="prettyprint linenums"></pre>
-            </td>
-            <td><button id="btn-splice">splice</button></td>
-            <td class="results">
-                <pre id="result10"></pre>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                toString
-                <div class="description">
-                    All objects have a toString method. For the Array object, toString creates a string from the items in the array.
-                    The items are comma-delimited, but if you want a different delimiter, you can use the join method and specify an
-                    alternate separator.
-                </div>
-                <pre id="code11" class="prettyprint linenums"></pre>
-            </td>
-            <td><button id="btn-toString">toString</button></td>
-            <td class="results">
-                <pre id="result11"></pre>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                unshift
-                <div class="description">Adds a new item to the beginning of an array and returns the new length.</div>
-                <pre id="code12" class="prettyprint linenums"></pre>
-            </td>
-            <td><button id="btn-unshift">unshift</button></td>
-            <td class="results">
-                <pre id="result12"></pre>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                valueOf
-                <div class="description">
-                    All objects have a valueOf method. For the Array object, valueOf returns the array.
-                </div>
-                <pre id="code13" class="prettyprint linenums"></pre>
-            </td>
-            <td><button id="btn-valueOf">valueOf</button></td>
-            <td class="results">
-                <pre id="result13"></pre>
-            </td>
-        </tr>
-        <!--tr>td{slice}>div.description{desc}+pre#code8.prettyprint.linenums^td>button#btn-slice{slice}^td.results>pre#result8-->
-    </table>
-
+    <header>
+        <h1>JavaScript Array Methods</h1>
+    </header>
+    <main role="main">
+        <table>
+            <thead>
+                <tr class="row">
+                    <th class="col-source">Code</th>
+                    <th class="col-button">Execute</th>
+                    <th class="col-result">Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--
+                        <tr>
+                            <td>
+                                sample code
+                                <pre class="prettyprint linenums">
+                &lt;script type="text/javascript"&gt;
+                // Here is some javascript
+                function helloWorld(world) {
+                    for (var i = 42; --i >= 0;) {
+                        alert('Hello ' + String(world));
+                    }
+                }
+                &lt;/script&gt;
+                &lt;style&gt;
+                    /* This is some CSS code */
+                    .red { color: red; }
+                    .green { color: green; }
+                    .blue {color: blue; }
+                    p { color: pink }
+                    u { color: "umber" }
+                &lt;/style&gt;</pre>
+                            </td>
+                            <td></td>
+                            <td class="results">
+                                <pre id="resultTest"></pre>
+                            </td>
+                        </tr>
+                -->
+                <tr>
+                    <td>
+                        <h2>concat</h2>
+                        <p class="description">Joins two or more arrays and returns a new array with all the items.</p>
+                        <pre class="prettyprint linenums"><code id="code0"></code></pre>
+                    </td>
+                    <td><button id="btn-concat">concat</button></td>
+                    <td class="results">
+                        <pre class=""><samp id="result0"></samp></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        indexOf
+                        <div class="description">Locates the item in the array and returns its index.</div>
+                        <pre class="prettyprint linenums"><code id="code1"></code></pre>
+                    </td>
+                    <td><button id="btn-indexOf">indexOf</button></td>
+                    <td class="results">
+                        <pre id="result1"></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        join
+                        <div class="description">
+                            Creates a string from the items in the array. The items are comma-delimited by default,
+                            but you can pass an alternate separator.
+                        </div>
+                        <pre id="code2" class="prettyprint linenums"></pre>
+                    </td>
+                    <td><button id="btn-join">join</button></td>
+                    <td class="results">
+                        <pre id="result2"></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        lastIndexOf
+                        <div class="description">
+                            Searches from the end of the array for the last item in the array
+                            that meets the search criteria and returns its index.
+                        </div>
+                        <pre id="code3" class="prettyprint linenums"></pre>
+                    </td>
+                    <td><button id="btn-lastIndexOf">lastIndexOf</button></td>
+                    <td class="results">
+                        <pre id="result3"></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        pop
+                        <div class="description">
+                            Removes and returns the last element of the array. This reduces the
+                            length of the array by one.
+                        </div>
+                        <pre id="code4" class="prettyprint linenums"></pre>
+                    </td>
+                    <td><button id="btn-pop">pop</button></td>
+                    <td class="results">
+                        <pre id="result4"></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        push
+                        <div class="description">Adds a new item to the end of an array and returns the new length.</div>
+                        <pre id="code5" class="prettyprint linenums"></pre>
+                    </td>
+                    <td><button id="btn-push">push</button></td>
+                    <td class="results">
+                        <pre id="result5"></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        reverse
+                        <div class="description">
+                            Reverses the order of the items in an array and returns a reference
+                            (not a new array) to the reversed array, so the original array is modified.
+                        </div>
+                        <pre id="code6" class="prettyprint linenums"></pre>
+                    </td>
+                    <td><button id="btn-reverse">reverse</button></td>
+                    <td class="results">
+                        <pre id="result6"></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        shift
+                        <div class="description">
+                            Removes and returns the first item in the array. If no items are in the
+                            array, the return value is undefined.
+                        </div>
+                        <pre id="code7" class="prettyprint linenums"></pre>
+                    </td>
+                    <td><button id="btn-shift">shift</button></td>
+                    <td class="results">
+                        <pre id="result7"></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        slice
+                        <div class="description">
+                            Returns a <strong>new</strong> array that represents part of the existing array. The slice method has two parameters:
+                            <em>start</em> and <em>end</em>. The start parameter is the index of the first item to include in the result. The end
+                            parameter is the index of the item that you don't want included in the result.
+                        </div>
+                        <pre id="code8" class="prettyprint linenums"></pre>
+                    </td>
+                    <td><button id="btn-slice">slice</button></td>
+                    <td class="results">
+                        <pre id="result8"></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        sort
+                        <div class="description">Sorts the items in an array and returns a reference to the array. The original array is modified.</div>
+                        <pre id="code9" class="prettyprint linenums"></pre>
+                    </td>
+                    <td><button id="btn-sort">sort</button></td>
+                    <td class="results">
+                        <pre id="result9"></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        splice
+                        <div class="description">
+                            Adds and removes items from an array and returns the removed items. The original array is modified to
+                            contain the result. The splice method's first parameter is the starting index of where to start adding or deleting.
+                            The second parameter indicates how many items to remove. If 0 is passed as the second parameter, no items are removed.
+                            If the second parameter is larger that the quantity of items available for removal, all items from the starting index
+                            to the end of the array are removed. After the first two parameters, you can specify as many items as you want to add.
+                        </div>
+                        <pre id="code10" class="prettyprint linenums"></pre>
+                    </td>
+                    <td><button id="btn-splice">splice</button></td>
+                    <td class="results">
+                        <pre id="result10"></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        toString
+                        <div class="description">
+                            All objects have a toString method. For the Array object, toString creates a string from the items in the array.
+                            The items are comma-delimited, but if you want a different delimiter, you can use the join method and specify an
+                            alternate separator.
+                        </div>
+                        <pre id="code11" class="prettyprint linenums"></pre>
+                    </td>
+                    <td><button id="btn-toString">toString</button></td>
+                    <td class="results">
+                        <pre id="result11"></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        unshift
+                        <div class="description">Adds a new item to the beginning of an array and returns the new length.</div>
+                        <pre id="code12" class="prettyprint linenums"></pre>
+                    </td>
+                    <td><button id="btn-unshift">unshift</button></td>
+                    <td class="results">
+                        <pre id="result12"></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        valueOf
+                        <div class="description">
+                            All objects have a valueOf method. For the Array object, valueOf returns the array.
+                        </div>
+                        <pre id="code13" class="prettyprint linenums"></pre>
+                    </td>
+                    <td><button id="btn-valueOf">valueOf</button></td>
+                    <td class="results">
+                        <pre id="result13"></pre>
+                    </td>
+                </tr>
+                <!--tr>td{slice}>div.description{desc}+pre#code8.prettyprint.linenums^td>button#btn-slice{slice}^td.results>pre#result8-->
+            </tbody>
+        </table>
+    </main>
+    <footer></footer>
     <script src="Scripts/ArrayMethods.js"></script>
     <script src="Scripts/Prettify/prettify.js"></script>
     <!--<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=js&skin=sunburst"></script>-->

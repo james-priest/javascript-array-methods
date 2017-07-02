@@ -116,6 +116,8 @@
     <Content Include="Scripts\Prettify\run_prettify.js" />
     <Content Include="Scripts\qunit.js" />
     <Content Include="Scripts\tests.js" />
+    <Content Include="test1.html" />
+    <Content Include="test2.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
