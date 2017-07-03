@@ -13,15 +13,18 @@ th {
 }
 
     th.col-source {
-        min-width: 720px;
+        /*min-width: 720px;*/
+        width:47%;
     }
 
     th.col-result {
-        min-width: 650px;
+        /*min-width: 650px;*/
+        width:47%;
     }
 
 td {
     padding: 0 20px 0 10px;
+    border: 1px solid lightgray;
 }
     td>div.description {
         font-size: smaller;
@@ -29,11 +32,13 @@ td {
     }
     td.results {
         position: relative;
+        vertical-align: bottom;
     }
     td.results>pre {
-        position:absolute;
+        /*position:absolute;*/
         bottom:0;
-        width: 600px;
+        /*width: 600px;*/
+        display: block;
     }
 
 
